@@ -1,0 +1,30 @@
+#include <bits/stdc++.h> 
+using namespace std; 
+int main()
+{	
+    int t;
+    cin>>t;
+    while(t--)
+    {
+    int w,h,n,check=1;
+    cin>>w>>h>>n;
+    while(w%2==0||h%2==0)
+	{
+	if(w%2==0)
+    {
+    	check*=2;
+    	w=w/2;
+	}
+	else if(h%2==0)
+	{
+		check*=2;
+		h=h/2;
+	}
+	}
+	if(check>=n)
+	cout<<"YES"<<endl;
+	else
+	cout<<"NO"<<endl;
+    }
+	return 0;
+}
