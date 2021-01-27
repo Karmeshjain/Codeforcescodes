@@ -1,0 +1,20 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+    	int n,m,a;
+    	cin>>n>>m;
+    	while(n--)
+    	{
+    		cin>>a;
+    		m-=a;
+		}
+	m==0?cout<<"YES"<<endl:cout<<"NO"<<endl;
+    }
+   return 0;
+}
