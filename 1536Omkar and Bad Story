@@ -1,0 +1,29 @@
+#include <bits/stdc++.h> //KarmeshDuggar
+using namespace std;
+#define ll long long
+ 
+int main() 
+{
+	
+    cin.tie(NULL);
+    ios::sync_with_stdio(false);
+int t,n,x;
+	cin>>t;
+	while(t--){
+		cin>>n;
+		bool am=0;
+		while(n--){
+			cin>>x;
+			if(x<0) am=1;
+		}
+		if(!am){
+			cout<<"YES\n";
+			cout<<"101\n";
+			for(int i=100;i>-1;i--) cout<<i<<" ";
+			cout<<"\n";
+		}
+		else cout<<"NO\n";
+		
+	}
+	return 0;
+}
