@@ -1,0 +1,31 @@
+#include <bits/stdc++.h> //KarmeshDuggar
+using namespace std;
+#define ll long long
+
+int main() 
+{
+	
+    cin.tie(NULL);
+    ios::sync_with_stdio(false);
+    int t;
+    cin>>t;
+    while(t--)
+    {
+     int a,b,c;
+	 cin>>a>>b>>c;
+	 ll pos=2*abs(b-a);
+	 int ans=0;
+	 if(b>pos|| a>pos ||c> pos)
+	 ans=-1;
+	 else
+	 {
+	 	ans=c+pos/2;
+	 	if(ans>pos)
+	 	{
+	 		ans=c-pos/2;
+		 }
+	}
+	cout<<ans<<"\n";  
+	}
+    return 0;
+}
