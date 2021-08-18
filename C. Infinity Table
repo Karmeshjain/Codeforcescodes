@@ -1,0 +1,38 @@
+#include <bits/stdc++.h> //KarmeshDuggar
+using namespace std;
+#define ll long long
+
+int main() 
+{
+	
+    cin.tie(NULL);
+    ios::sync_with_stdio(false);
+    int t;
+    cin>>t;
+    while(t--)
+    {
+     int k;cin>>k;
+     int x=floor(sqrt(k));
+     int l=x;
+     int i=x,j=x+1;
+	 x=x*x;
+	 if(x==k)
+	 cout<<i<<" "<<"1";
+	 else
+	 {
+	 	x++;
+	 	i=1;
+     while(x!=k)
+     {
+     	if(l+1==i)
+     	j--;
+     	else
+     	i++;
+     	x++;
+	 }
+	 cout<<i<<" "<<j;
+      }
+     cout<<endl;
+	 }
+    return 0;
+}
