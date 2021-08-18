@@ -1,0 +1,66 @@
+#include <bits/stdc++.h> //KarmeshDuggar
+using namespace std;
+#define ll long long
+isbe(ll n)
+{
+	unordered_set<ll> s;
+	while(n!=0)
+	{
+		s.insert(n%10);
+		n=n/10;
+	}
+	return s.size()<=2;
+}
+isbe2(ll n)
+{
+	unordered_set<ll> s;
+	while(n!=0)
+	{
+		s.insert(n%10);
+		n=n/10;
+	}
+	return s.size()==1;
+}
+int main() 
+{
+	
+    cin.tie(NULL);
+    ios::sync_with_stdio(false);
+    ll t;
+    cin>>t;
+    while(t--)
+    {
+     ll n,k;cin>>n>>k;
+     if(n/10==0)
+     cout<<n;
+     else if(k==1)
+     {
+     	ll l=0,val,x=n;
+     	while(n!=0)
+     	{
+     	 val=n;
+     	 n=n/10;
+		  l++;	
+		}
+		ll ans=0;
+		for(ll i=0;i<l;i++)
+		ans=ans*10+val;
+		if(ans>=x)
+		cout<<ans;
+		else
+		{
+			while(!isbe2(x))
+	 		x++;
+	 	cout<<x;
+		}
+	 }
+	 else
+	 {
+	 	while(!isbe(n))
+	 		n++;
+	 	cout<<n;
+	 }
+     cout<<endl;
+    } 
+    return 0;
+}
