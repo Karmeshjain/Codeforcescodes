@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long 
+int main()
+{
+	ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    int t;
+    cin>>t;
+    while(t--)
+    {
+     long long a,b;
+     cin>>a>>b;
+     long long t=1;
+     while(b!=0)
+     {
+     	if(a%2==0)
+     	a=a-t;
+     	else
+     	a=a+t;
+     	t+=1;
+     	b--;
+	 }
+    cout<<a<<"\n";
+	}
+ 
+    return 0;
+}
