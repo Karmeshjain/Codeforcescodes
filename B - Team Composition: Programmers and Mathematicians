@@ -1,0 +1,19 @@
+#include <bits/stdc++.h>         //Karmesh Duggar
+using namespace std;
+#define ll long long 
+int main()
+{
+	ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    ll t;
+    cin>>t;
+    while(t--)
+    {
+    	int a,b;
+    	cin>>a>>b;
+    	int ans=min((a+b)/4,min(a,b));
+    	cout<<ans<<"\n";
+	}
+ 
+    return 0;
+}
